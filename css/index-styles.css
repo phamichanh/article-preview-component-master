@@ -242,6 +242,7 @@ p {
   border-radius: 20px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .btn-author-share-deactivated {
@@ -272,6 +273,7 @@ p {
   float: left;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .btn-share {
