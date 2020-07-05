@@ -26,41 +26,90 @@ p {
   color: hsl(214, 17%, 51%);
 }
 /*-------------------------------------------------*/
+@media only screen and (max-width: 375px) {
+  /* For Mobile (max 375px) */
+  #wrapper {
+    width: 340px;
+    height: auto;
+  }
+
+  #main-content {
+    height: auto;
+  }
+
+  .left-image {
+    width: 100%;
+    height: 200px;
+    float: left;
+  }
+
+  .shorted-content {
+    width: 280px;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+
+  .content-title {
+    font-size: 18px;
+  }
+
+  .author-detail {
+    width: 170px;
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  /* For Desktop (min 375px) */
+  #wrapper {
+    width: 800px;
+    height: 300px;
+  }
+
+  #main-content {
+    height: 300px;
+  }
+
+  .left-image {
+    width: 300px;
+    height: 300px;
+    float: left;
+  }
+
+  .shorted-content {
+    width: 440px;
+    height: 240px;
+    padding: 30px;
+  }
+
+  .content-title {
+    font-size: 25px;
+  }
+
+  .author-detail {
+    width: 320px;
+  }
+
+}
+
 #wrapper {
-  width: 800px;
-  height: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  /*margin: 50px auto 0 auto;
-  position: relative;*/
 }
 
 #main-content {
   width: 100%;
-  height: 300px;
   border-radius: 10px;
   overflow: hidden;
 }
 
-.left-image {
-  width: 300px;
-  height: 300px;
-  float: left;
-}
-
 .shorted-content {
-  width: 440px;
-  height: 240px;
   float: left;
   background-color: white;
-  padding: 30px;
-}
-
-.content-title {
-  font-size: 25px;
 }
 
 .content-detail {
@@ -69,9 +118,8 @@ p {
 }
 
 .content-author {
-  margin: 15px 0 0 0;
+  margin: 25px 0 0 0;
   height: 50px;
-  position: relative;
 }
 
 .author-avatar {
@@ -84,7 +132,6 @@ p {
 .author-detail {
   float: left;
   height: 50px;
-  width: 320px;
   margin-left: 20px;
 }
 
@@ -103,10 +150,93 @@ p {
 }
 
 /*-----------------------------------------------------*/
+@media only screen and (max-width: 375px) {
+  /* For Mobile (max 375px) */
+  #btn-author-share {
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+  }
+
+  #share-box {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    bottom: 0px;
+    background-color: hsl(217, 19%, 35%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .share-content {
+    float: left;
+    margin-left: 30px;
+    margin-top: 12px;
+  }
+
+  .btn-author-share-activated {
+    background-image: url(../images/icon-share-active.svg);
+    background-color: hsl(214, 17%, 51%);
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  /* For Desktop (min 375px) */
+
+  #btn-author-share {
+    float: right;
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+
+  #share-box {
+    position: absolute;
+    right: -75px;
+    top: 150px;
+  }
+
+  .share-content {
+    width: 190px;
+    margin: 0 auto;
+  }
+
+
+  .arrow_box {
+    width: 250px;
+    height: 55px;
+    border-radius: 10px;
+  	background: hsl(217, 19%, 35%);
+    border: solid 1px hsl(217, 19%, 25%);
+  }
+
+  .arrow_box:after {
+  	top: 100%;
+  	left: 50%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-top-color: hsl(217, 19%, 35%);
+  	border-width: 15px;
+  	margin-left: -15px;
+  }
+
+  .btn-author-share-deactivated:hover {
+    background-color: hsl(217, 19%, 35%);
+    background-image: url(../images/icon-share-active.svg);
+  }
+
+  .btn-author-share-activated {
+    background-color: hsl(217, 19%, 35%);
+    background-image: url(../images/icon-share-active.svg);
+  }
+}
+
 #btn-author-share {
-  float: right;
   display: inline-block;
-  margin-top: 5px;
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -119,48 +249,6 @@ p {
   background-color: hsl(210, 46%, 95%);
 }
 
-.btn-author-share-deactivated:hover {
-  background-color: hsl(217, 19%, 35%);
-  background-image: url(../images/icon-share-active.svg);
-}
-
-.btn-author-share-actived {
-  background-color: hsl(217, 19%, 35%);
-  background-image: url(../images/icon-share-active.svg);
-}
-
-.arrow_box {
-  width: 250px;
-  height: 55px;
-  border-radius: 10px;
-	background: hsl(217, 19%, 35%);
-  border: solid 1px hsl(217, 19%, 25%);
-}
-
-.arrow_box:after {
-	top: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-top-color: hsl(217, 19%, 35%);
-	border-width: 15px;
-	margin-left: -15px;
-}
-
-#share-box {
-  position: absolute;
-  right: -75px;
-  top: 140px;
-}
-
-.share-content {
-  width: 190px;
-  margin: 0 auto;
-}
 
 .share-content p {
   color: hsl(212, 23%, 69%);
